@@ -40,17 +40,17 @@ export async function generateMetadata({ params }) {
 
   const title = genre?.name || 'Unknown';
   
-  const pageUrl = `https://hdmovie2-watch.netlify.app//tv-show/genre/${genreName}`;
+  const pageUrl = `https://hdmovie2-watch.netlify.app/tv-show/genre/${genreName}`;
   const imageUrl = 'https://live.staticflickr.com/65535/54812181460_747a3f7596_b.jpg';
 
   return {
-    title: `Hdmovie2 - ${title} TV Series`,
-    description: `Find and watch the best ${title} TV series for free on Hdmovie2.`,
+    title: `HDMovie2 - ${title} TV Series`,
+    description: `Find and watch the best ${title} TV series for free on HDMovie2.`,
     openGraph: {
-      title: `Hdmovie2 - ${title} TV Series`,
-      description: `Find and watch the best ${title} TV series for free on Hdmovie2.`,
+      title: `HDMovie2 - ${title} TV Series`,
+      description: `Find and watch the best ${title} TV series for free on HDMovie2.`,
       url: pageUrl,
-      siteName: 'Hdmovie2',
+      siteName: 'HDMovie2',
       images: [
         {
           url: imageUrl,
@@ -66,8 +66,8 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       site: '@WatchStream123',
       creator: '@WatchStream123',
-      title: `Hdmovie2 - ${title} TV Series`,
-      description: `Find and watch the best ${title} TV series for free on Hdmovie2.`,
+      title: `HDMovie2 - ${title} TV Series`,
+      description: `Find and watch the best ${title} TV series for free on HDMovie2.`,
       images: [imageUrl],
     },
     other: {

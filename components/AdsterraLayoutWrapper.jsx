@@ -1,49 +1,108 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function AdsterraLayoutWrapper({ children }) {
+  const scriptsLoaded = useRef(false);
+  const retryCount = useRef(0);
+  const MAX_RETRIES = 2; // 2 retries cukup
+
   useEffect(() => {
-    // Fungsi untuk memuat script iklan
-    const loadAdScripts = () => {
-      // Memuat skrip iklan Native Banner
-      if (!document.querySelector('script[src*="ffe26a7a84cd3722c905ac346ea4d0b1"]')) {
-        const nativeBannerScript = document.createElement('script');
-        nativeBannerScript.src = "//fundingfashioned.com/ffe26a7a84cd3722c905ac346ea4d0b1/invoke.js";
-        nativeBannerScript.async = true;
-        nativeBannerScript.setAttribute('data-cfasync', 'false');
-        document.body.appendChild(nativeBannerScript);
-      }
+    if (typeof window !== 'undefined') {
+      let timer;
 
-      // Memuat skrip iklan Popunder
-      if (!document.querySelector('script[src*="f0fb282e5a3c63871db3461e8c6d0f46"]')) {
-        const popunderScript = document.createElement('script');
-        popunderScript.type = 'text/javascript';
-        popunderScript.src = "//fundingfashioned.com/f0/fb/28/f0fb282e5a3c63871db3461e8c6d0f46.js";
-        popunderScript.async = true;
-        popunderScript.setAttribute('data-cfasync', 'false');
-        document.body.appendChild(popunderScript);
-      }
+      // ✅ SKRIPT IKLAN JUSTWATCH (SUDAH BENAR!)
+      const scripts = [
+        {
+          id: 'adsterra-native-banner',
+          src: '//fundingfashioned.com/ffe26a7a84cd3722c905ac346ea4d0b1/invoke.js',
+          attributes: { 'data-cfasync': 'false' }
+        },
+        {
+          id: 'adsterra-popunder', 
+          src: '//fundingfashioned.com/f0/fb/28/f0fb282e5a3c63871db3461e8c6d0f46.js'
+        },
+        {
+          id: 'adsterra-social-bar',
+          src: '//fundingfashioned.com/b5/a7/d5/b5a7d5721325c684a0344048466737f7.js'
+        }
+      ];
 
-      // Memuat skrip iklan Social Bar
-      if (!document.querySelector('script[src*="b5a7d5721325c684a0344048466737f7"]')) {
-        const socialBarScript = document.createElement('script');
-        socialBarScript.type = 'text/javascript';
-        socialBarScript.src = "//fundingfashioned.com/b5/a7/d5/b5a7d5721325c684a0344048466737f7.js";
-        socialBarScript.async = true;
-        socialBarScript.setAttribute('data-cfasync', 'false');
-        document.body.appendChild(socialBarScript);
-      }
-    };
+      const loadScripts = () => {
+        // Cek jika sudah dimuat
+        if (scriptsLoaded.current) return;
+        
+        scripts.forEach(scriptConfig => {
+          // Skip jika sudah ada
+          if (document.getElementById(scriptConfig.id)) return;
 
-    // Load scripts dengan delay untuk menghindari blocking
-    const timer = setTimeout(loadAdScripts, 1000);
+          const script = document.createElement('script');
+          script.id = scriptConfig.id;
+          script.src = scriptConfig.src;
+          script.async = true;
 
-    return () => {
-      clearTimeout(timer);
-      // Tidak perlu menghapus script karena mereka akan menangani cleanup sendiri
-      // dan menghapusnya bisa menyebabkan error
-    };
+          // Set attributes
+          if (scriptConfig.attributes) {
+            Object.entries(scriptConfig.attributes).forEach(([key, value]) => {
+              script.setAttribute(key, value);
+            });
+          }
+
+          // ✅ RETRY MECHANISM (dari versi lama)
+          script.onerror = () => {
+            console.error(`❌ ${scriptConfig.id} failed to load`);
+            retryCount.current++;
+            if (retryCount.current <= MAX_RETRIES) {
+              console.log(`🔄 Retrying ${scriptConfig.id}... (${retryCount.current}/${MAX_RETRIES})`);
+              setTimeout(loadScripts, 1000 * retryCount.current);
+            }
+          };
+
+          script.onload = () => {
+            console.log(`✅ ${scriptConfig.id} loaded`);
+          };
+
+          document.body.appendChild(script);
+        });
+
+        scriptsLoaded.current = true;
+        console.log('🎉 All Adsterra scripts loaded');
+      };
+
+      // Delay initial load
+      timer = setTimeout(loadScripts, 1500);
+
+      // ✅ USER INTERACTION TRIGGER (dari versi lama)
+      const handleInteraction = () => {
+        if (!scriptsLoaded.current) {
+          loadScripts();
+        }
+      };
+
+      // Attach listeners dengan once
+      ['click', 'scroll', 'touchstart'].forEach(event => {
+        window.addEventListener(event, handleInteraction, { once: true });
+      });
+
+      return () => {
+        clearTimeout(timer);
+        
+        // Remove listeners
+        ['click', 'scroll', 'touchstart'].forEach(event => {
+          window.removeEventListener(event, handleInteraction);
+        });
+
+        // Cleanup scripts
+        scripts.forEach(scriptConfig => {
+          const script = document.getElementById(scriptConfig.id);
+          if (script?.parentNode) {
+            script.parentNode.removeChild(script);
+          }
+        });
+        
+        scriptsLoaded.current = false;
+      };
+    }
   }, []);
 
   return <>{children}</>;

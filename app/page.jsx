@@ -2,423 +2,435 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FaHome, FaFilm, FaTv, FaSearch, FaStar, FaUsers, FaGlobe, FaPlay, FaAward, FaCalendarAlt, FaHeart, FaRocket } from 'react-icons/fa';
+import { FaHome, FaFilm, FaTv, FaSearch, FaStar, FaUsers, FaGlobe, FaUser, FaCalendar, FaTrophy } from 'react-icons/fa';
 
 export default function About() {
   return (
     <div className="min-h-screen bg-slate-900 text-gray-300">
-      {/* Enhanced Hero Section dengan gradient yang lebih dramatis */}
-      <div className="relative bg-gradient-to-br from-orange-900/80 via-purple-950/60 to-slate-900 py-24 overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1489599809519-364a47ae3cde?ixlib=rb-4.0.3')] bg-cover bg-center mix-blend-overlay opacity-10"></div>
-        
-        {/* Animated elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-orange-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-bounce"></div>
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-orange-500/20 px-4 py-2 rounded-full mb-6 border border-orange-500/30">
-            <FaAward className="text-orange-400" />
-            <span className="text-white font-semibold">United States of America's #1 Movie Database</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
-            Hdmovie2
+      {/* Hero Section dengan Optimasi SEO */}
+      <div className="bg-gradient-to-b from-purple-900/50 to-slate-900 py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-orange-400">
+            HDMovie2 Ultimate Movie & TV Series Database Your Complete Cinema Guide
           </h1>
-          <p className="text-2xl md:text-3xl font-light mb-4 text-orange-200">
-            Ultimate Movie & TV Series Database
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Your comprehensive guide to 10,000+ movies, 5,000+ TV series, actor profiles, genre pages, and streaming information.
           </p>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Your comprehensive guide to <span className="text-orange-400 font-semibold">10,000+ movies</span>, <span className="text-purple-400 font-semibold">5,000+ TV series</span>, reviews, and streaming information. Discover, explore, and enjoy cinematic excellence.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Link href="/" className="group bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-orange-500/25 hover:scale-105">
-              <FaHome className="group-hover:scale-110 transition-transform" /> Home
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <Link href="/movie/popular" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+              <FaFilm /> Browse Movies
             </Link>
-            <Link href="/movie/genre/action" className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-blue-500/25 hover:scale-105">
-              <FaFilm className="group-hover:scale-110 transition-transform" /> Browse Movies
+            <Link href="/tv-show/popular" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+              <FaTv /> Browse TV Series
             </Link>
-            <Link href="/tv-show/genre/crime" className="group bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-purple-500/25 hover:scale-105">
-              <FaTv className="group-hover:scale-110 transition-transform" /> Browse TV Series
+            <Link href="/people" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+              <FaUser /> Explore Actors
             </Link>
-          </div>
-          
-          <div className="flex justify-center items-center gap-6 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-              <FaPlay className="text-green-400" />
-              <span>Latest Updates Daily</span>
-            </div>
-            <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-            <div className="flex items-center gap-2">
-              <FaHeart className="text-red-400" />
-              <span>Community Driven</span>
-            </div>
-            <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-            <div className="flex items-center gap-2">
-              <FaRocket className="text-yellow-400" />
-              <span>Fast & Responsive</span>
-            </div>
+            <Link href="/rankings" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+              <FaTrophy /> Top Rankings
+            </Link>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
-        {/* Enhanced Main Content */}
-        <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/80 p-8 rounded-2xl shadow-2xl backdrop-blur-sm border border-gray-700/50">
-          {/* Introduction dengan gambar yang lebih menarik */}
-          <section className="mb-20">
-            <div className="text-center mb-16">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-10 group">
-                <img
-                  src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600"
-                  alt="Hdmovie2 - Ultimate movie database platform"
-                  width={1920}
-                  height={600}
-                  className="rounded-2xl transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-left">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                    Discover the World of Cinema with <span className="text-orange-400">Hdmovie2</span>
-                  </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl">
-                    United States of America's most complete movie and TV series information platform with real-time updates and community insights.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-gray-400 mb-6 leading-relaxed">
-                  <strong className="text-orange-400">Hdmovie2</strong> stands as United States of America's premier destination for comprehensive movie and TV series information, offering an unparalleled database that caters to both casual viewers and dedicated cinephiles. Our platform represents the culmination of years of development and community feedback, creating a space where entertainment enthusiasts can discover, explore, and engage with cinematic content like never before.
+      <div className="container mx-auto px-4 py-12">
+        {/* Main Content dengan Deskripsi SEO Extended */}
+        <div className="bg-gray-800/50 p-8 rounded-xl shadow-lg backdrop-blur-sm">
+          {/* Introduction dengan Konten SEO */}
+          <section className="mb-16">
+            <div className="text-center mb-12">
+              <img
+                src="https://live.staticflickr.com/65535/54812181460_747a3f7596_b.jpg"
+                alt="Movie reels and cinema tickets - Ultimate movie database for film enthusiasts"
+                width={1024}
+                height={416}
+                className="rounded-xl shadow-2xl mx-auto mb-8"
+              />
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-orange-300">
+                Discover the World of Cinema with HDMovie2 - America's Premier Movie Database
+              </h2>
+              <div className="text-lg text-gray-400 max-w-4xl mx-auto space-y-4 text-justify">
+                <p>
+                  <strong>HDMovie2</strong> is United America's most complete and comprehensive <strong>movie database</strong> and <strong>TV series information</strong> platform, serving as the definitive online resource for cinephiles, film students, industry professionals, and casual viewers alike. Our platform provides meticulously curated, accurate data spanning over a century of cinematic history, from silent film classics to the latest blockbuster releases and trending TV series. If you're searching for "movie database," "film information," "TV series guide," or "cinema encyclopedia," you've found the ultimate destination.
                 </p>
-                
-                <p className="text-lg text-gray-400 leading-relaxed">
-                  In today's rapidly evolving digital landscape, finding accurate, up-to-date information about movies and television shows can be challenging. <strong>Hdmovie2 solves this problem</strong> by providing a centralized hub that combines detailed metadata, user-generated content, and intelligent recommendations to enhance your entertainment experience.
+                <p>
+                  As a premier <strong>movie database website</strong>, we offer more than just basic information - we deliver an immersive experience that includes detailed user reviews, comprehensive streaming guides across multiple platforms, in-depth actor and filmmaker profiles, complete genre archives, and sophisticated search capabilities that allow users to discover content based on countless criteria. Our <strong>film database</strong> is designed to answer all your questions about movies, from "where to watch [movie title]" to "who directed [film name]" and "what movies are similar to [favorite film]."
+                </p>
+                <p>
+                  Our database features an extensive collection of <strong>over 10,000 movies</strong> and <strong>5,000+ TV series</strong>, each with complete metadata including cast and crew details, production information, technical specifications, awards and nominations, box office performance, critical reception, and viewer ratings. We continuously update our database with new releases, ensuring our users have access to the most current information in the entertainment industry. Whether you need a <strong>movie guide</strong>, <strong>TV show database</strong>, <strong>actor filmography</strong>, or <strong>streaming availability</strong> information, HDMovie2 has you covered.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Enhanced Features Grid dengan animasi */}
-          <section className="mb-20">
-            <div className="text-center mb-16">
-              <div className="inline-block bg-orange-500/10 px-6 py-3 rounded-full border border-orange-500/20 mb-6">
-                <span className="text-orange-400 font-semibold">WHY CHOOSE Hdmovie2</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent">
-                Premium Features for Movie Lovers
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Experience the difference with our comprehensive suite of features designed specifically for entertainment enthusiasts.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { icon: FaFilm, title: "10,000+ Movies", desc: "Comprehensive database from classic to latest releases", color: "orange" },
-                { icon: FaTv, title: "5,000+ TV Series", desc: "Complete TV show information with seasons and episodes", color: "purple" },
-                { icon: FaSearch, title: "Smart Search", desc: "Advanced search with filters for genre, year, rating and more", color: "blue" },
-                { icon: FaStar, title: "User Reviews", desc: "Real ratings and reviews from our active community", color: "yellow" },
-                { icon: FaUsers, title: "Community Driven", desc: "Join thousands of movie enthusiasts sharing their passion", color: "green" },
-                { icon: FaGlobe, title: "Global Content", desc: "Movies and TV series from around the world with subtitles", color: "red" }
-              ].map((feature, index) => (
-                <div key={index} className="group bg-gradient-to-br from-gray-700/40 to-gray-800/60 p-8 rounded-2xl border border-gray-600/30 hover:border-orange-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                  <div className={`text-5xl mb-6 text-${feature.color}-400 group-hover:scale-110 transition-transform duration-300 inline-flex p-4 bg-gray-700/50 rounded-2xl`}>
-                    <feature.icon />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">{feature.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{feature.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Enhanced Detailed Sections dengan konten SEO yang diperkaya */}
-          <section className="mb-16 bg-gradient-to-r from-gray-800/40 to-gray-900/60 p-10 rounded-2xl border border-gray-700/50">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="bg-orange-500/20 p-3 rounded-2xl">
-                <FaFilm className="text-3xl text-orange-400" />
-              </div>
-              <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent">
-                The Ultimate Digital Cinematic Encyclopedia
-              </h2>
-            </div>
-            
-            <div className="space-y-8 text-justify">
-              <p className="text-lg text-gray-300 leading-relaxed">
-                <strong className="text-orange-400">Hdmovie2</strong> has revolutionized the way movie enthusiasts interact with cinematic content in the United States. As the leading <strong>movie database USA</strong>, our platform provides unprecedented access to comprehensive information about films and television series. Unlike traditional movie websites that offer basic plot summaries and cast lists, Hdmovie2 delivers deep analytical content, production insights, critical reception analysis, and streaming availability across multiple platforms.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Our commitment to being the most extensive <strong>film information database</strong> available online drives us to continuously expand our library. We cover everything from silent film classics to the latest blockbuster releases, independent cinema to major studio productions, and cult favorites to award-winning masterpieces. Each entry in our database undergoes rigorous verification by our editorial team, ensuring accuracy in details like release dates, running times, age ratings, and production credits.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                What truly sets Hdmovie2 apart in the competitive landscape of <strong>movie streaming information</strong> platforms is our integration of real-time data. Our proprietary technology monitors dozens of streaming services simultaneously, updating availability status instantly when content moves between platforms. This means users always know exactly where to find their desired movies and TV shows without visiting multiple websites or checking various subscription services individually.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                For television aficionados, our <strong>TV series database</strong> provides unparalleled depth. Beyond basic episode listings, we offer detailed season analyses, character development tracking, behind-the-scenes production notes, cancellation and renewal information, and comprehensive ratings data from both critics and viewers. Our platform understands that television consumption has evolved, with binge-watching and streaming releases requiring different information structures than traditional weekly broadcasts.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The <strong>movie reviews</strong> section on Hdmovie2 represents a sophisticated ecosystem of critical analysis. We aggregate professional reviews from established critics while maintaining a vibrant community of amateur reviewers who provide genuine audience perspectives. Each review is categorized by depth (from quick takes to comprehensive analysis), contains spoiler warnings, and connects to similar films for comparative reading. Our rating system goes beyond simple star ratings to include breakdowns by acting, direction, screenplay, cinematography, and overall enjoyment.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Our platform's technical architecture ensures that searching for <strong>where to watch movies online</strong> yields precise, actionable results. We maintain direct partnerships with streaming platforms to receive API-level data about content availability, regional restrictions, and quality options. This technical integration allows us to provide unique insights like which service offers the highest bitrate for a particular film, which platforms include special features or director commentary, and where content is available in 4K, HDR, or Dolby Atmos formats.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                For film students, researchers, and industry professionals, Hdmovie2 serves as an essential <strong>cinematic research tool</strong>. Our database includes comprehensive production credits that go beyond standard cast lists to include key grips, gaffers, production designers, and other crucial crew members. We track filming locations with geographical precision, note budget and box office figures with source citations, and document awards history with ceremony-specific categories. This academic-grade approach to movie data makes Hdmovie2 invaluable for serious film study.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The entertainment landscape constantly evolves with new streaming services, distribution models, and viewing technologies. Hdmovie2 maintains its position as the <strong>best movie website United States of America</strong> by adapting to these changes faster than any competitor. Our dedicated team monitors industry developments, updates our platform architecture accordingly, and ensures that users always have access to the most current information about how, where, and when they can enjoy cinematic content.
-              </p>
-            </div>
-          </section>
-
-          <section className="mb-16 bg-gradient-to-r from-gray-800/40 to-gray-900/60 p-10 rounded-2xl border border-gray-700/50">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="bg-blue-500/20 p-3 rounded-2xl">
-                <FaPlay className="text-3xl text-blue-400" />
-              </div>
-              <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
-                Intelligent Content Discovery & Personalized Viewing Experience
-              </h2>
-            </div>
-            
-            <div className="space-y-8 text-justify">
-              <p className="text-lg text-gray-300 leading-relaxed">
-                In an era of overwhelming content options, Hdmovie2 transforms the challenge of <strong>what to watch tonight</strong> into an opportunity for discovery. Our advanced recommendation algorithms analyze viewing patterns, rating histories, time constraints, mood indicators, and seasonal preferences to generate genuinely useful suggestions. Unlike basic "similar movies" features, our system understands nuanced connections between films based on thematic elements, directorial styles, cinematographic approaches, and narrative structures.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The heart of our platform's discovery engine lies in its sophisticated understanding of <strong>movie genres</strong> and subgenres. We recognize that "action movies" encompass everything from martial arts classics to superhero blockbusters to military thrillers, and our categorization system reflects these distinctions. Similarly, our approach to <strong>drama series</strong> distinguishes between family dramas, legal dramas, medical dramas, and political dramas, understanding that fans of one subgenre may have different preferences than fans of another.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Our <strong>personalized suggestions</strong> technology represents the cutting edge of entertainment recommendation systems. By employing machine learning models trained on millions of user interactions, our platform identifies patterns that human curators might miss while maintaining the intuitive understanding that algorithms alone cannot provide. This hybrid approach ensures that recommendations feel both data-driven and human-curated, striking the perfect balance between statistical relevance and creative insight.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                For viewers seeking <strong>best movies to watch</strong> based on specific criteria, Hdmovie2 offers unprecedented filtering capabilities. Users can search for films by runtime (perfect for "90-minute movies" when you have limited time), by mood (uplifting films for difficult days, thought-provoking films for intellectual stimulation), by setting (movies set in specific cities or historical periods), or by thematic elements (films about redemption, coming-of-age stories, workplace narratives). These sophisticated filters transform the search experience from frustrating to delightful.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Television discovery presents unique challenges in the streaming era, and Hdmovie2 has developed specialized tools for <strong>TV series recommendations</strong>. Our platform considers not just genre similarities but structural elements like episode length, season arc complexity, binge-ability scores, and series completion status. We help users identify shows with satisfying conclusions versus those canceled prematurely, series with consistent quality versus those that decline over time, and hidden gems that flew under the radar despite critical acclaim.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The social dimension of movie watching receives special attention on Hdmovie2. Our platform facilitates <strong>movie watching with friends</strong> through shared watchlists, synchronized viewing recommendations, and group rating features. Users can create private communities around specific interests (French New Wave cinema, 80s action movies, Scandinavian crime dramas) and share discoveries within these curated spaces. This social layer transforms solitary viewing into shared cultural experiences, even when participants are geographically separated.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Seasonal and temporal factors significantly influence viewing choices, and Hdmovie2's algorithms incorporate these variables intelligently. Our system suggests <strong>Halloween horror movies</strong> as October approaches, romantic comedies around Valentine's Day, family-friendly films during holiday seasons, and atmospheric thrillers for rainy weekends. This contextual awareness extends to daily patterns too, with different recommendations for weekday evenings versus weekend marathons, and consideration of timezone differences for global users.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Accessibility represents a core value at Hdmovie2, and our platform provides comprehensive information about <strong>closed captioning availability</strong>, audio description tracks, subtitle languages, and dubbing options. We understand that entertainment should be available to all viewers regardless of hearing or visual impairments, and we work diligently to ensure our database includes detailed accessibility information for every title. This commitment to inclusive viewing experiences sets a new standard for movie information platforms.
-              </p>
-            </div>
-          </section>
-
-          <section className="mb-16 bg-gradient-to-r from-gray-800/40 to-gray-900/60 p-10 rounded-2xl border border-gray-700/50">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="bg-green-500/20 p-3 rounded-2xl">
-                <FaSearch className="text-3xl text-green-400" />
-              </div>
-              <h2 className="text-4xl font-bold bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">
-                Advanced Search Technology & Comprehensive Metadata Architecture
-              </h2>
-            </div>
-            
-            <div className="space-y-8 text-justify">
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Hdmovie2's search functionality represents a quantum leap beyond traditional movie database search tools. Our platform employs natural language processing that understands queries like "movies like The Godfather but set in modern times" or "TV shows with strong female leads in sci-fi settings." This intelligent search capability stems from our sophisticated metadata architecture that tags content with hundreds of descriptive elements beyond basic genre classifications.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The technical foundation of our search experience lies in our proprietary <strong>movie metadata taxonomy</strong>. Each film and series in our database receives detailed tagging across multiple dimensions: narrative elements (plot devices, character archetypes, story structures), technical aspects (cinematography styles, editing techniques, sound design approaches), thematic content (social commentary, philosophical questions, emotional journeys), and production details (budget ranges, filming techniques, special effects methods). This multidimensional tagging enables searches of unprecedented specificity and relevance.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                For users researching <strong>movie streaming sites</strong> and availability, our platform provides granular filtering options. Users can search for content available on specific services (Netflix, Amazon Prime, Hulu, Disney+), within particular subscription tiers (included with base subscription, premium add-ons, rental only), at certain quality levels (4K, HDR, Dolby Vision), or with specific language options. Our real-time availability tracking ensures these search results reflect current licensing arrangements rather than outdated information.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The strategic implementation of search engine optimization ensures that Hdmovie2 appears prominently for queries like <strong>"latest movie releases 2024"</strong>, <strong>"best TV series to binge-watch"</strong>, and <strong>"where can I stream [movie title]"</strong>. Our content architecture follows semantic HTML principles, employs structured data markup (Schema.org), and maintains optimal page speed scores—all critical factors in search engine rankings. This technical SEO excellence complements our high-quality content to deliver maximum visibility in search results.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Beyond basic keyword optimization, Hdmovie2 addresses the full spectrum of user search intents. Informational searches ("who directed Citizen Kane"), navigational searches ("Hdmovie2 action movies"), transactional searches ("where to buy Spider-Man digital download"), and commercial investigation searches ("compare streaming services for horror movies") all receive tailored responses. This understanding of search intent taxonomy allows us to serve the right content format for each query type, whether that's detailed articles, comparison tables, interactive tools, or straightforward answers.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Our platform's content strategy includes comprehensive coverage of trending topics, cultural moments, and seasonal viewing patterns. When a film wins major awards, we immediately publish in-depth analysis of its production history, cultural impact, and thematic significance. When a TV series finale generates social media discussion, we provide episode breakdowns, series retrospectives, and creator interviews. This responsive content creation ensures Hdmovie2 remains the go-to source for timely, relevant entertainment information.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The mobile search experience receives particular attention in our development roadmap. With over 60% of entertainment searches occurring on mobile devices, Hdmovie2's responsive design ensures optimal performance across all screen sizes. Our mobile interface includes voice search capabilities, one-tap streaming links, offline watchlist access, and personalized notifications about availability changes for saved titles. This mobile-first approach recognizes how modern users interact with entertainment information throughout their day.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                International accessibility represents another key differentiator for Hdmovie2. Our platform supports searches in multiple languages, provides region-specific availability information, and understands cultural context in recommendations. Users searching for <strong>Bollywood movies streaming in USA</strong> or <strong>Korean dramas with English subtitles</strong> receive precisely tailored results that account for licensing differences, subtitle availability, and cultural relevance. This global perspective makes Hdmovie2 truly valuable for diverse audiences with varied entertainment preferences.
-              </p>
-            </div>
-          </section>
-
-          <section className="mb-16 bg-gradient-to-r from-gray-800/40 to-gray-900/60 p-10 rounded-2xl border border-gray-700/50">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="bg-purple-500/20 p-3 rounded-2xl">
-                <FaUsers className="text-3xl text-purple-400" />
-              </div>
-              <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
-                Community Engagement & Social Discovery Features
-              </h2>
-            </div>
-            
-            <div className="space-y-8 text-justify">
-              <p className="text-lg text-gray-300 leading-relaxed">
-                At the heart of Hdmovie2 lies a vibrant community of movie enthusiasts whose collective wisdom enhances the platform for all users. Our <strong>community-driven reviews</strong> system goes beyond simple star ratings to include detailed analysis, thematic interpretation, production context, and personal reflections. Each review contributes to our understanding of how films resonate with different audiences, creating a rich tapestry of perspectives that no single critic could provide.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The social features of Hdmovie2 transform solitary viewing into shared cultural experiences. Users can create and share <strong>personalized watchlists</strong>, follow friends and critics with similar tastes, participate in discussion forums about specific films or genres, and join virtual watch parties with synchronized viewing and live chat. These social connections create a sense of community that enriches the entertainment experience and helps users discover content they might otherwise miss.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Our platform's <strong>user rating system</strong> employs sophisticated weighting algorithms that account for review depth, user credibility, and rating distribution. Unlike simple average scoring systems, our approach minimizes manipulation from extreme ratings while giving appropriate weight to thoughtful, detailed reviews. This creates more accurate representation of community sentiment and helps users make informed viewing decisions based on authentic audience reactions.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Hdmovie2 facilitates <strong>movie discussions</strong> through specialized forums organized by film, director, actor, genre, and thematic element. These discussion spaces range from casual conversation threads to in-depth analytical debates, accommodating users with varying levels of cinematic knowledge and engagement. Moderators ensure conversations remain respectful and on-topic, while allowing diverse opinions and interpretations to flourish in a constructive environment.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The platform's contribution system empowers users to improve the database directly. Community members can submit corrections to factual information, suggest additional tags for improved searchability, upload missing images, and contribute trivia or production anecdotes. This collaborative approach to database maintenance ensures continuous improvement while giving users ownership over the platform's accuracy and completeness.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Seasonal community events represent another key engagement feature on Hdmovie2. We host <strong>monthly viewing challenges</strong> (watch films from a specific decade, explore a particular director's filmography, sample international cinema), <strong>virtual film festivals</strong> with scheduled screenings and live discussions, and <strong>annual awards prediction contests</strong> where users compete to forecast Oscar winners. These events create shared experiences that strengthen community bonds and expose participants to diverse cinematic content.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The educational potential of our community features receives special emphasis. Aspiring filmmakers, film students, and cinema scholars use Hdmovie2 as a research tool and discussion platform. Our dedicated "Film School" section offers curated viewing lists for learning cinematography techniques, understanding editing principles, studying screenwriting structures, and analyzing directorial styles. Community members with professional experience often contribute tutorials, analysis, and career advice in these educational spaces.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Privacy and personalization coexist harmoniously in Hdmovie2's community features. Users control exactly how much of their viewing history, ratings, and reviews are visible to others, with granular privacy settings for different types of information. This respect for user privacy builds trust while still enabling social discovery through opt-in sharing features. The result is a community that feels safe, respectful, and genuinely engaged with cinematic art rather than merely consuming entertainment passively.
-              </p>
-            </div>
-          </section>
-
-          <section className="mb-16 bg-gradient-to-r from-gray-800/40 to-gray-900/60 p-10 rounded-2xl border border-gray-700/50">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="bg-yellow-500/20 p-3 rounded-2xl">
-                <FaRocket className="text-3xl text-yellow-400" />
-              </div>
-              <h2 className="text-4xl font-bold bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent">
-                Technological Innovation & Future Development Roadmap
-              </h2>
-            </div>
-            
-            <div className="space-y-8 text-justify">
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Hdmovie2's technological infrastructure represents the cutting edge of web development, employing serverless architecture, edge computing, and real-time data synchronization to deliver instantaneous access to movie information. Our platform's performance metrics consistently exceed industry standards, with page load times under two seconds, 99.9% uptime reliability, and seamless scaling to accommodate traffic spikes during major film releases or award ceremonies.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The future development roadmap for Hdmovie2 includes groundbreaking features that will further transform how users interact with cinematic content. Planned enhancements include <strong>augmented reality movie discovery</strong> (point your phone at a location to see films shot there), <strong>AI-powered content analysis</strong> (automated identification of cinematographic styles, thematic patterns, and narrative structures), and <strong>predictive availability tracking</strong> (forecasting when films will arrive on specific streaming platforms based on licensing patterns).
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Our commitment to open data principles ensures that Hdmovie2 contributes to the broader ecosystem of film information. We provide public APIs for developers, educational institutions, and researchers to access our metadata (with appropriate rate limiting and attribution requirements). This open approach fosters innovation in entertainment technology while establishing Hdmovie2 as the authoritative source for structured movie data.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Accessibility technology represents a key focus in our development priorities. We're implementing <strong>screen reader optimization</strong> for visually impaired users, <strong>voice navigation</strong> for hands-free browsing, <strong>cognitive load reduction</strong> features for users with attention challenges, and <strong>internationalization frameworks</strong> that support right-to-left languages and cultural presentation differences. These inclusive design principles ensure Hdmovie2 serves all movie lovers regardless of ability or background.
-              </p>
-              
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The integration of blockchain technology for verification and attribution represents another exciting frontier. We're developing systems to <strong>verify review authenticity</strong> through cryptographic signatures, create <strong>tamper-proof records</strong> of movie metadata changes, and establish <strong>decentralized content moderation</strong> that balances community governance with platform integrity. These blockchain applications address longstanding challenges in user-generated content platforms while introducing new possibilities for trust and transparency.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Machine learning advancements will power the next generation of Hdmovie2's recommendation systems. We're developing models that understand <strong>emotional responses to films</strong> (beyond simple genre preferences), predict <strong>changing tastes over time</strong> as users mature and explore different content, and identify <strong>cultural context relevance</strong> for international viewers. These sophisticated algorithms will make personalized recommendations feel increasingly intuitive and serendipitous.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Partnerships with academic institutions represent another key growth area. We're collaborating with film studies departments to create <strong>educational resources</strong>, with computer science programs to advance <strong>recommendation algorithm research</strong>, and with library systems to develop <strong>public access interfaces</strong> for cinematic information. These partnerships ensure Hdmovie2 contributes to both entertainment and education while staying connected to cutting-edge research in multiple disciplines.
-              </p>
-
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Sustainability considerations inform our technical architecture decisions. We're optimizing server efficiency to reduce energy consumption, implementing <strong>green hosting solutions</strong> powered by renewable energy, and developing features that encourage <strong>sustainable viewing habits</strong> (like highlighting locally hosted content to reduce data transmission distances). These environmental commitments align with our broader mission of creating positive impact through entertainment technology.
-              </p>
-            </div>
-          </section>
-
-          {/* Enhanced Quick Stats */}
-          <section className="bg-gradient-to-r from-orange-900/40 to-purple-900/40 rounded-2xl p-10 text-center mb-16 border border-orange-500/20">
-            <h3 className="text-3xl font-bold mb-10 bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent">
-              Hdmovie2 by Numbers
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { number: "10,000+", label: "Movies", icon: FaFilm },
-                { number: "5,000+", label: "TV Series", icon: FaTv },
-                { number: "50,000+", label: "Active Users", icon: FaUsers },
-                { number: "100,000+", label: "Reviews", icon: FaStar }
-              ].map((stat, index) => (
-                <div key={index} className="group">
-                  <stat.icon className="text-4xl text-orange-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 font-medium">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Enhanced Call to Action */}
-          <section className="text-center py-16 bg-gradient-to-br from-gray-800/60 to-gray-900/80 rounded-2xl border border-gray-700/50">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent">
-              Start Your Cinematic Journey Today!
+          {/* SEO-Optimized Description Section - Minimal 1500+ Kata dengan Keyword Density Tinggi */}
+          <section className="mb-16 bg-gray-900/50 p-8 rounded-xl">
+            <h2 className="text-3xl font-bold mb-8 text-center text-orange-300">
+              Complete Guide to Movies, TV Series, and Cinema Database - Your Ultimate Film Resource
             </h2>
-            <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Join our community of <span className="text-orange-400">50,000+ movie lovers</span> who trust Hdmovie2 for accurate information, genuine reviews, and personalized recommendations. Discover hidden gems, revisit classics, and stay updated with the latest releases—all in one place.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link href="/" className="group bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-orange-500/25 hover:scale-105">
-                <FaHome className="text-xl group-hover:scale-110 transition-transform" /> Explore Homepage
-              </Link>
-              <Link href="/movie/genre/action" className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-blue-500/25 hover:scale-105">
-                <FaFilm className="text-xl group-hover:scale-110 transition-transform" /> Browse Movies
-              </Link>
-              <Link href="/tv-show/genre/crime" className="group bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-purple-500/25 hover:scale-105">
-                <FaTv className="text-xl group-hover:scale-110 transition-transform" /> Discover TV Series
-              </Link>
-            </div>
             
-            <div className="mt-12 flex flex-wrap justify-center gap-8 text-gray-400">
-              <div className="flex items-center gap-3">
-                <FaCalendarAlt className="text-green-400" />
-                <span>Daily Content Updates</span>
+            <div className="space-y-6 text-gray-400 text-justify">
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Introduction to HDMovie2 Database - The Best Movie Information Site</h3>
+              
+              <p>
+                Welcome to <strong>HDMovie2</strong>, the ultimate destination for <strong>movie enthusiasts</strong> and <strong>television series fans</strong>. Our platform represents the culmination of years of data collection, curation, and user experience optimization, designed to serve as the most reliable and comprehensive online resource for cinematic information. Whether you're researching a classic film, discovering new TV shows, or exploring actor filmographies, our <strong>movie database</strong> provides unparalleled depth and accuracy. People searching for "complete movie database," "film information website," or "TV series guide" consistently find HDMovie2 to be their most valuable resource.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Comprehensive Movie Database Features - Find Any Film Information</h3>
+              
+              <p>
+                Our <strong>movie database</strong> stands as one of the most extensive collections of film information available online. Each movie entry includes complete production details, comprehensive cast and crew listings, detailed plot summaries, critical reviews, audience ratings, technical specifications, and streaming availability across multiple platforms. We cover films from every era and genre, including Hollywood blockbusters, independent films, international cinema, documentary features, animated films, and cult classics. When users search for "movie details," "film cast," "movie reviews," or "where to watch movies online," HDMovie2 provides comprehensive answers with our extensive <strong>film database</strong>.
+              </p>
+
+              <p>
+                The database features advanced filtering capabilities allowing users to search movies by year, genre, director, actor, language, country of origin, runtime, MPAA rating, and more. Each film profile includes related recommendations, similar movies, trivia, goofs, quotes, soundtrack information, and behind-the-scenes details. Our streaming guide shows exactly where each movie is available to watch, whether on Netflix, Amazon Prime, Hulu, Disney+, HBO Max, or other streaming services. For those searching "movies like [title]," "best films of [year]," or "[genre] movies list," our <strong>movie discovery</strong> tools provide perfect solutions.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">TV Series Database and Episode Guides - Complete Television Information</h3>
+              
+              <p>
+                Our <strong>TV series database</strong> provides exhaustive information on thousands of television shows from around the world. Each series includes complete episode guides with detailed summaries, air dates, director and writer credits, guest stars, and viewer ratings for individual episodes. We cover everything from classic sitcoms and drama series to reality TV, anime, documentaries, and limited series. Search queries like "TV show episodes," "series guide," "television database," or "TV series information" lead users to our comprehensive platform where they can find detailed information about any show.
+              </p>
+
+              <p>
+                The database includes comprehensive season breakdowns, character profiles, series timelines, awards and nominations, behind-the-scenes features, and cancellation or renewal status updates. Our streaming information shows which platforms carry each series and which seasons are available. We also provide information on international availability and regional restrictions where applicable. For those asking "where to watch [TV series]," "TV show seasons," or "series episode guide," HDMovie2 delivers accurate, up-to-date information through our extensive <strong>television database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Actor and Filmmaker Profiles - Complete Filmography Database</h3>
+              
+              <p>
+                Our <strong>people database</strong> features detailed profiles for actors, directors, producers, writers, cinematographers, composers, and other industry professionals. Each profile includes biographical information, career timelines, filmography with role details, awards and nominations, personal trivia, and high-quality photo galleries. We track career developments, upcoming projects, and industry news for thousands of entertainment professionals. Search terms like "actor filmography," "director movies," "celebrity profile," or "film crew credits" are perfectly served by our comprehensive <strong>actor database</strong>.
+              </p>
+
+              <p>
+                The database allows users to explore connections between industry professionals, see who frequently collaborates with whom, and discover new talent based on their interests. Each profile includes related content recommendations and career highlights, making it easy to explore an individual's body of work comprehensively. Whether you're researching "[actor name] movies," "[director] filmography," or "movies with [actor]," our <strong>film people database</strong> provides complete information with our detailed profiles and comprehensive credit listings.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Genre Exploration and Categorization - Movie Genres Database</h3>
+              
+              <p>
+                Our <strong>genre system</strong> provides sophisticated categorization that goes beyond basic labels. We offer detailed genre pages for categories including Action, Adventure, Animation, Biography, Comedy, Crime, Documentary, Drama, Family, Fantasy, Film-Noir, History, Horror, Music, Musical, Mystery, Romance, Sci-Fi, Sport, Thriller, War, and Western. Each genre page includes sub-genre breakdowns, historical context, notable examples, and recommendations. When users search for "[genre] movies," "best action films," "romantic comedy list," or "horror movie database," they find exactly what they need on HDMovie2.
+              </p>
+
+              <p>
+                Beyond traditional genres, we also categorize content by mood, theme, setting, and style. Users can discover movies and series based on specific themes like time travel, coming-of-age, heist films, courtroom dramas, or specific historical periods. This sophisticated categorization system helps users discover content that matches their specific interests and preferences. Search queries like "movies about [theme]," "[setting] films," or "films with [style]" are expertly handled by our advanced <strong>movie categorization</strong> system that understands user intent and delivers relevant results.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Year and Decade Archives - Historical Film Database</h3>
+              
+              <p>
+                Our <strong>historical archives</strong> allow users to explore cinema chronologically. Each year page shows all movies released in that year, sorted by popularity, critical reception, and box office performance. Decade overviews provide context about cinematic trends, technological developments, and cultural influences that shaped each era of filmmaking. Common searches like "movies from [year]," "films of the [decade]," or "best movies [year]" are perfectly answered by our comprehensive <strong>yearly movie database</strong> that organizes films by their release date with complete contextual information.
+              </p>
+
+              <p>
+                The archives include special sections for significant years in cinema history, such as 1939 (often called "Hollywood's Greatest Year"), 1975 (the birth of the modern blockbuster), and 1999 (a landmark year for independent and mainstream cinema). Each archive page includes historical context, notable trends, award winners, and cultural impact analysis. For researchers, students, or casual viewers searching "cinema history," "films by year," or "movie timeline," our <strong>historical film database</strong> provides invaluable resources with accurate dating and contextual information about each era of filmmaking.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Ratings, Rankings, and User Reviews - Movie Rating Database</h3>
+              
+              <p>
+                Our comprehensive <strong>rating system</strong> aggregates scores from major critics, industry awards, and user reviews to provide balanced, reliable evaluations of movies and TV series. The ranking system includes "Best of All Time" lists, annual rankings, genre-specific rankings, and specialized lists like "Hidden Gems," "Cult Classics," and "Award Winners." Search terms like "movie ratings," "film rankings," "best movies list," or "top rated films" direct users to our carefully curated <strong>movie ranking database</strong> that combines critical consensus with audience opinions for balanced evaluations.
+              </p>
+
+              <p>
+                User reviews on HDMovie2 come from verified viewers and include detailed analysis, spoiler warnings, and content advisories. Our review system encourages thoughtful criticism and helpful recommendations, creating a community of engaged film enthusiasts who contribute to the platform's depth and value. For those looking for "movie reviews," "film criticism," "user ratings," or "audience reviews," our platform provides comprehensive review aggregation from both professional critics and regular viewers, giving balanced perspectives on every film and TV series in our database.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Streaming Guide and Availability - Where to Watch Movies Database</h3>
+              
+              <p>
+                One of our most valuable features is the comprehensive <strong>streaming guide</strong> that shows exactly where every movie and TV series is available to watch. We track availability across dozens of streaming platforms including subscription services, rental services, free platforms, and broadcast television. Our database includes region-specific information and regularly updates to reflect changing licensing agreements. The common search "where to watch [movie title]" is perfectly served by our <strong>streaming availability database</strong> that shows all current options for viewing any film or series.
+              </p>
+
+              <p>
+                The streaming guide includes price comparisons, quality options (SD, HD, 4K), availability dates, and expiration warnings. We also provide information on physical media availability (DVD, Blu-ray, 4K UHD) and digital purchase options across various platforms. For queries like "streaming movies," "watch online," "movie rental," or "digital purchase," our platform provides comprehensive information about all viewing options, helping users find the most convenient and cost-effective way to watch their desired content through our extensive <strong>movie streaming database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Advanced Search and Discovery Tools - Movie Search Engine</h3>
+              
+              <p>
+                Our <strong>advanced search</strong> functionality allows users to find content based on incredibly specific criteria. Search by multiple actors simultaneously, combine genre filters, set runtime ranges, specify release date windows, filter by country of origin, language, MPAA rating, color vs black-and-white, aspect ratio, and countless other technical and creative parameters. For complex searches like "movies with [actor1] and [actor2]," "films from [country] in [language]," or "[genre] movies under [runtime] minutes," our <strong>movie search database</strong> delivers precise results that match exact user requirements.
+              </p>
+
+              <p>
+                The discovery engine uses sophisticated algorithms to recommend content based on viewing history, ratings, and stated preferences. Our "If You Like" system suggests similar content, while our "Explore" features help users discover new genres, directors, and actors they might enjoy based on their established interests. Search queries like "movies similar to [title]," "if you like [film] watch [suggestions]," or "film recommendations" are expertly handled by our <strong>movie recommendation engine</strong> that analyzes user preferences and viewing history to suggest content they'll genuinely enjoy.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Educational and Research Resources - Film Study Database</h3>
+              
+              <p>
+                HDMovie2 serves as a valuable resource for film students, researchers, and educators. Our database includes academic citations, production histories, critical analysis, and cultural context for thousands of films. We provide resources for studying film theory, cinematic techniques, industry history, and cultural impact. Search terms like "film research," "cinema studies," "movie analysis," or "film history" lead students and researchers to our comprehensive <strong>educational film database</strong> that supports academic work with reliable information and contextual analysis.
+              </p>
+
+              <p>
+                Special sections cover film movements (French New Wave, German Expressionism, Italian Neorealism), technological developments (transition to sound, color film, digital cinema), and industry trends. These resources make HDMovie2 an essential tool for anyone studying or teaching film and media. For queries like "film movements," "cinema technology," "industry history," or "movie production," our platform provides detailed information that supports both casual learning and formal academic research through our extensive <strong>film education database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Community Features and User Engagement - Movie Community Platform</h3>
+              
+              <p>
+                Our platform fosters an engaged community of film enthusiasts through discussion forums, watch parties, user lists, and social features. Users can create and share custom lists, participate in polls and quizzes, join genre-specific communities, and contribute to our growing database through our moderated submission system. For those searching "movie community," "film forums," "cinephile groups," or "movie discussion," our platform provides vibrant spaces for interaction and shared appreciation of cinema through our active <strong>movie community database</strong>.
+              </p>
+
+              <p>
+                Regular features include weekly watch recommendations, director spotlights, genre deep-dives, and historical retrospectives. Our community calendar highlights film festivals, special screenings, anniversaries, and industry events of interest to our users. Search terms like "film events," "movie watchlist," "cinephile community," or "film discussion boards" are perfectly served by our platform's social features that connect movie lovers worldwide through our comprehensive <strong>film community database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Mobile Experience and Accessibility - Movie Database App</h3>
+              
+              <p>
+                HDMovie2 is fully optimized for mobile devices, with responsive design that works perfectly on smartphones and tablets. Our mobile app (available on iOS and Android) provides all the features of the desktop site with additional mobile-specific functionality including watchlist synchronization, offline access to saved information, and push notifications for availability updates. For searches like "movie database app," "film information mobile," "TV series app," or "cinema guide phone," our platform provides exceptional mobile experiences through our dedicated <strong>mobile movie database</strong> applications.
+              </p>
+
+              <p>
+                We prioritize accessibility with features including screen reader compatibility, keyboard navigation, adjustable text sizes, high contrast modes, and closed captioning information for all video content. Our commitment to accessibility ensures that all users, regardless of ability, can fully experience and benefit from our database. Search queries like "accessible movie database," "film website accessibility," or "inclusive cinema resources" reflect our commitment to serving all users through our completely accessible <strong>inclusive film database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Data Accuracy and Regular Updates - Reliable Movie Information</h3>
+              
+              <p>
+                Maintaining data accuracy is our highest priority. We employ a combination of automated data collection, manual verification, and community contributions to ensure information correctness. Our team of editors regularly reviews and updates entries, correcting errors and adding new information as it becomes available. For users seeking "accurate movie information," "reliable film database," "updated TV series guide," or "correct cinema data," HDMovie2 provides verified information through our meticulously maintained <strong>accurate movie database</strong>.
+              </p>
+
+              <p>
+                We track industry announcements, press releases, and official sources to provide the most current information about upcoming releases, casting news, production updates, and streaming availability changes. Our update schedule ensures that users always have access to the latest and most accurate information. Search terms like "latest movie updates," "new film information," "updated series guide," or "current cinema database" are perfectly served by our continuously updated platform that provides real-time information through our dynamic <strong>updated film database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">International Cinema Coverage - Global Movie Database</h3>
+              
+              <p>
+                HDMovie2 provides comprehensive coverage of international cinema, with detailed information on films from every country and language. Our database includes foreign language films, international co-productions, and regional cinema with proper contextual information about cultural significance and reception. Search queries like "international movies," "foreign films database," "world cinema guide," or "[country] films" are expertly handled by our extensive <strong>global movie database</strong> that celebrates cinematic diversity from around the world.
+              </p>
+
+              <p>
+                Each international film entry includes language options, subtitle availability, cultural context, and reception in both its country of origin and internationally. We cover major film industries from Hollywood to Bollywood, Nollywood to East Asian cinema, European art films to Latin American cinema. For those searching "Bollywood movies," "Korean films," "French cinema," or "international film festival," our platform provides comprehensive coverage through our diverse <strong>international film database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Indie and Alternative Cinema - Independent Film Database</h3>
+              
+              <p>
+                Beyond mainstream Hollywood productions, HDMovie2 provides extensive coverage of independent films, documentary features, short films, and alternative cinema. Our database includes festival favorites, limited releases, and niche productions that might not receive wide attention but represent important artistic achievements. Search terms like "independent movies," "indie film database," "documentary films," or "festival films" lead users to our comprehensive <strong>independent movie database</strong> that champions diverse voices and alternative storytelling.
+              </p>
+
+              <p>
+                We track film festivals worldwide, providing information about submissions, selections, awards, and distribution deals. Our database helps independent filmmakers reach audiences and helps viewers discover groundbreaking work outside the mainstream. For queries like "Sundance films," "Cannes selections," "independent cinema," or "alternative movies," our platform provides detailed information through our specialized <strong>indie film database</strong> that supports the entire independent film ecosystem.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Technical Specifications Database - Film Technical Information</h3>
+              
+              <p>
+                For cinephiles and industry professionals interested in technical details, HDMovie2 provides comprehensive technical specifications for every film in our database. This includes aspect ratios, film stock or digital format information, camera equipment used, sound formats, visual effects techniques, and post-production details. Search queries like "movie technical specs," "film aspect ratio," "cinema sound format," or "movie production details" are perfectly served by our detailed <strong>technical film database</strong> that satisfies even the most technical inquiries about film production.
+              </p>
+
+              <p>
+                Our technical database includes information about directors of photography, production designers, editors, sound designers, visual effects supervisors, and other key technical crew members. We track awards in technical categories and provide context about technological innovations in filmmaking. For searches like "Oscar technical awards," "cinematography database," "film editing information," or "movie sound design," our platform provides comprehensive technical information through our specialized <strong>film technical database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Box Office and Financial Data - Movie Business Database</h3>
+              
+              <p>
+                HDMovie2 includes comprehensive box office data and financial information for films where available. Our database tracks opening weekend numbers, domestic and international totals, production budgets, marketing costs, and profitability analysis. Search terms like "box office results," "movie earnings," "film budget," or "Hollywood financial data" lead users to our detailed <strong>box office database</strong> that provides insights into the business side of filmmaking.
+              </p>
+
+              <p>
+                We provide context about box office performance relative to expectations, comparisons with similar films, and analysis of what factors contributed to financial success or failure. For investors, industry professionals, or curious fans searching "movie business," "film economics," "Hollywood finances," or "box office analysis," our platform provides valuable data through our comprehensive <strong>film financial database</strong> that illuminates the economic realities of the film industry.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Awards and Nominations Database - Film Awards Information</h3>
+              
+              <p>
+                Our comprehensive awards database tracks nominations and wins across all major film awards ceremonies including the Oscars, Golden Globes, BAFTAs, Cannes, Sundance, and hundreds of other international awards. Each film and TV series entry includes complete awards information with ceremony details, categories, and historical context. Search queries like "Oscar nominations," "award-winning movies," "film awards database," or "movie prize winners" are perfectly served by our extensive <strong>film awards database</strong>.
+              </p>
+
+              <p>
+                We provide analysis of awards trends, historical patterns, and notable wins and snubs throughout cinema history. Our database allows users to explore which films have won the most awards, which actors have the most nominations, and how different award ceremonies compare in their selections. For those searching "Academy Awards history," "award statistics," "film prize database," or "movie honors," our platform provides comprehensive information through our detailed <strong>movie awards database</strong>.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Conclusion: Your Ultimate Cinema Resource - Complete Movie Database</h3>
+              
+              <p>
+                HDMovie2 represents more than just a database - it's a comprehensive ecosystem for film discovery, education, and appreciation. Whether you're a casual viewer looking for something to watch tonight, a film student researching cinematic history, an industry professional verifying credits, or a cinephile exploring new horizons, our platform provides the tools, information, and community to enhance your cinematic journey. For every search query related to movies, from "movie database" and "film information" to "TV series guide" and "actor filmography," HDMovie2 delivers comprehensive, accurate, and valuable information through our complete <strong>cinema database ecosystem</strong>.
+              </p>
+
+              <p>
+                With our commitment to accuracy, comprehensiveness, and user experience, HDMovie2 continues to set the standard for online movie databases. Join our growing community of film enthusiasts and discover why we're recognized as the premier destination for cinematic information and discovery. Whether you're searching for basic movie details or conducting deep cinematic research, HDMovie2 provides everything you need in one comprehensive, reliable, and user-friendly <strong>ultimate movie database</strong> that serves film lovers at every level of interest and expertise.
+              </p>
+            </div>
+          </section>
+
+          {/* Features Grid */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-12 text-center text-orange-300">
+              Complete Movie Database Features
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gray-700/50 p-6 rounded-xl text-center">
+                <FaFilm className="text-4xl text-orange-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Movie Details Database</h3>
+                <p className="text-gray-400 text-justify">Complete information, cast, reviews, and streaming availability for thousands of films in our comprehensive movie database</p>
               </div>
-              <div className="flex items-center gap-3">
-                <FaHeart className="text-red-400" />
-                <span>Community Powered</span>
+              <div className="bg-gray-700/50 p-6 rounded-xl text-center">
+                <FaTv className="text-4xl text-orange-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">TV Series Database</h3>
+                <p className="text-gray-400 text-justify">Complete episode guides, season information, and streaming details for television shows in our TV series database</p>
               </div>
-              <div className="flex items-center gap-3">
-                <FaGlobe className="text-blue-400" />
-                <span>Global & Local Content</span>
+              <div className="bg-gray-700/50 p-6 rounded-xl text-center">
+                <FaUser className="text-4xl text-orange-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Actor Profiles Database</h3>
+                <p className="text-gray-400 text-justify">Detailed actor information with complete filmography and career highlights in our people database</p>
               </div>
-              <div className="flex items-center gap-3">
-                <FaRocket className="text-yellow-400" />
-                <span>Lightning Fast</span>
+              <div className="bg-gray-700/50 p-6 rounded-xl text-center">
+                <FaCalendar className="text-4xl text-orange-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Year Archives Database</h3>
+                <p className="text-gray-400 text-justify">Browse movies by release year and explore historical decades of cinema in our yearly film database</p>
+              </div>
+              <div className="bg-gray-700/50 p-6 rounded-xl text-center">
+                <FaTrophy className="text-4xl text-orange-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Top Rankings Database</h3>
+                <p className="text-gray-400 text-justify">Highest rated movies and TV series across all categories and genres in our ranking database</p>
+              </div>
+              <div className="bg-gray-700/50 p-6 rounded-xl text-center">
+                <FaSearch className="text-4xl text-orange-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Advanced Search Database</h3>
+                <p className="text-gray-400 text-justify">Find content by multiple criteria and sophisticated filters for precise discovery in our search database</p>
               </div>
             </div>
+          </section>
+
+          {/* Detailed Sections dengan text-justify */}
+          <section className="mb-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-orange-300">Complete Movie Information Database</h3>
+                <div className="text-gray-400 mb-4 text-justify space-y-3">
+                  <p>
+                    Access comprehensive details for every movie in our extensive database with complete metadata, production information, and streaming availability across all major platforms. Our movie database provides everything film enthusiasts search for online.
+                  </p>
+                  <ul className="space-y-2 ml-4">
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Complete cast and crew information with role details and biographical data in our film database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>User reviews and professional critic ratings aggregated from multiple sources in our review database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Streaming platform availability across subscription, rental, and free services in our streaming database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Trailers, teasers, behind-the-scenes footage, and official video content in our media database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Similar movie recommendations and algorithmically generated related content in our recommendation database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Release dates, box office data, production budgets, and financial performance in our financial database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Technical specifications including runtime, aspect ratio, color process, and sound in our technical database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Awards, nominations, festival screenings, and critical reception analysis in our awards database</span>
+                    </li>
+                  </ul>
+                </div>
+                <Link href="/movie/popular" className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                  <FaFilm /> Explore Complete Movie Database
+                </Link>
+              </div>
+              <div className="bg-gray-700/30 p-6 rounded-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Comprehensive movie database interface with detailed film information and streaming options"
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="bg-gray-700/30 p-6 rounded-xl order-2 lg:order-1">
+                <img
+                  src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Actor profiles and filmography database with career information and movie credits"
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="order-1 lg:order-2">
+                <h3 className="text-2xl font-bold mb-4 text-orange-300">Actor & People Profiles Database</h3>
+                <div className="text-gray-400 mb-4 text-justify space-y-3">
+                  <p>
+                    Discover detailed information about your favorite actors, directors, and industry professionals with comprehensive career data and filmography listings in our people database.
+                  </p>
+                  <ul className="space-y-2 ml-4">
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Complete biography, personal details, and career milestones with timeline in our biography database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Full filmography with role details, release dates, and production information in our filmography database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>TV series appearances, guest roles, and recurring character information in our television credits database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Awards, nominations, honors, and industry recognition with ceremony details in our awards database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Upcoming projects, current productions, and announced future work in our projects database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>High-quality photos, media galleries, interview transcripts, and public appearances in our media database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Collaboration networks showing frequent co-stars and creative partnerships in our network database</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-400 mr-2">•</span>
+                      <span>Educational background, training, and professional development information in our education database</span>
+                    </li>
+                  </ul>
+                </div>
+                <Link href="/people" className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                  <FaUser /> Browse Complete Actor Database
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Call to Action dengan Optimasi SEO */}
+          <section className="text-center py-12 bg-gradient-to-r from-orange-900/30 to-purple-900/30 rounded-xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-orange-300">
+              Start Your Cinematic Journey with HDMovie2 Today - Ultimate Movie Database
+            </h2>
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto text-justify">
+              Join our community of film enthusiasts accessing the most comprehensive movie and TV series database available online. With thousands of verified entries, real-time updates, and sophisticated discovery tools, HDMovie2 provides everything you need to explore, research, and enjoy the world of cinema. Whether you're searching for a movie database, film information, TV series guide, actor filmography, streaming availability, or any other cinema-related information, HDMovie2 delivers comprehensive answers through our complete movie database platform.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/movie/365-days-this-day-2022/stream" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
+                <FaFilm /> Start Exploring Movie Database
+              </Link>
+              <Link href="/tv-show/popular" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
+                <FaTv /> Browse TV Series Database
+              </Link>
+            </div>
+            <p className="mt-8 text-gray-400 max-w-3xl mx-auto text-justify">
+              <strong>HDMovie2</strong> - Your ultimate resource for movie information, TV series details, actor profiles, streaming guides, and cinematic discovery. Whether you're researching film history, planning your viewing schedule, or simply exploring the vast world of cinema, we provide the comprehensive database, accurate information, and intuitive tools you need to enhance your movie-watching experience and deepen your understanding of film as an art form and cultural phenomenon. As the premier movie database online, we answer all your film-related queries with comprehensive, reliable information that satisfies both casual viewers and serious cinephiles alike through our complete cinema database ecosystem.
+            </p>
           </section>
         </div>
       </div>
