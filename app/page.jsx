@@ -47,9 +47,12 @@ export default function About() {
                 className="rounded-xl shadow-2xl mx-auto mb-8"
               />
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-orange-300">
-                Discover the World of Cinema with HDMovie2 - America's Premier Movie Database
+                Discover the World of Cinema with HDMovie2
+				<span className="block text-xl md:text-4xl font-bold mt-2 text-orange-300">
+                  America's Premier Movie Database
+                </span>
               </h2>
-              <div className="text-lg text-gray-400 max-w-4xl mx-auto space-y-4 text-justify">
+              <div className="text-lg text-gray-400 max-w-4xl mx-auto space-y-4 text-center">
                 <p>
                   <strong>HDMovie2</strong> is United America's most complete and comprehensive <strong>movie database</strong> and <strong>TV series information</strong> platform, serving as the definitive online resource for cinephiles, film students, industry professionals, and casual viewers alike. Our platform provides meticulously curated, accurate data spanning over a century of cinematic history, from silent film classics to the latest blockbuster releases and trending TV series. If you're searching for "movie database," "film information," "TV series guide," or "cinema encyclopedia," you've found the ultimate destination.
                 </p>
@@ -66,7 +69,10 @@ export default function About() {
           {/* SEO-Optimized Description Section - Minimal 1500+ Kata dengan Keyword Density Tinggi */}
           <section className="mb-16 bg-gray-900/50 p-8 rounded-xl">
             <h2 className="text-3xl font-bold mb-8 text-center text-orange-300">
-              Complete Guide to Movies, TV Series, and Cinema Database - Your Ultimate Film Resource
+              Complete Guide to Movies, TV Series and Cinema Database
+			  <span className="block text-xl md:text-3xl font-bold mt-2 text-orange-300">
+			    HDMovie2 Your Ultimate Film Resource
+			  </span>
             </h2>
             
             <div className="space-y-6 text-gray-400 text-justify">
@@ -414,10 +420,13 @@ export default function About() {
 
           {/* Call to Action dengan Optimasi SEO */}
           <section className="text-center py-12 bg-gradient-to-r from-orange-900/30 to-purple-900/30 rounded-xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-orange-300">
-              Start Your Cinematic Journey with HDMovie2 Today - Ultimate Movie Database
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-orange-300">
+              Start Your Cinematic Journey Today
+			  <span className="block text-xl md:text-4xl font-bold mt-2 text-orange-300">
+			    With HDMovie2 Ultimate Movie Database
+			  </span>
             </h2>
-            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto text-justify">
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto text-center">
               Join our community of film enthusiasts accessing the most comprehensive movie and TV series database available online. With thousands of verified entries, real-time updates, and sophisticated discovery tools, HDMovie2 provides everything you need to explore, research, and enjoy the world of cinema. Whether you're searching for a movie database, film information, TV series guide, actor filmography, streaming availability, or any other cinema-related information, HDMovie2 delivers comprehensive answers through our complete movie database platform.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -428,7 +437,7 @@ export default function About() {
                 <FaTv /> Browse TV Series Database
               </Link>
             </div>
-            <p className="mt-8 text-gray-400 max-w-3xl mx-auto text-justify">
+            <p className="mt-8 text-gray-400 max-w-3xl mx-auto text-center">
               <strong>HDMovie2</strong> - Your ultimate resource for movie information, TV series details, actor profiles, streaming guides, and cinematic discovery. Whether you're researching film history, planning your viewing schedule, or simply exploring the vast world of cinema, we provide the comprehensive database, accurate information, and intuitive tools you need to enhance your movie-watching experience and deepen your understanding of film as an art form and cultural phenomenon. As the premier movie database online, we answer all your film-related queries with comprehensive, reliable information that satisfies both casual viewers and serious cinephiles alike through our complete cinema database ecosystem.
             </p>
           </section>
