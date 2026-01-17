@@ -10,8 +10,11 @@ export default function About() {
       {/* Hero Section dengan Optimasi SEO */}
       <div className="bg-gradient-to-b from-purple-900/50 to-slate-900 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-orange-400">
-            HDMovie2 Ultimate Movie & TV Series Database Your Complete Cinema Guide
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-3 text-orange-400">
+            HDMovie2 Ultimate Movie & TV Series Database
+			<span className="block text-xl md:text-4xl font-extrabold mt-2 text-orange-400">
+			  Your Complete Cinema Guide
+			</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Your comprehensive guide to 10,000+ movies, 5,000+ TV series, actor profiles, genre pages, and streaming information.
